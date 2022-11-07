@@ -1,15 +1,41 @@
 {
     "menus": [
         {
-            "id": 0, 
-            "name": "Menu 1"
-        },
-        {
-            "id": 1,
-            "name": "Menu 2"
+            "menuID": 1, 
+            "menuName": "Glitzy Turkey Feast",
+            "recipes": [ 
+                {
+                    "recipeID": 1,
+                    "recipeName": "Glazed and Lacquered Roast Turkey",
+                    "recipeLink": "https://www.bonappetit.com/recipe/glazed-and-lacquered-roast-turkey",
+                    "recipeImage": "https://assets.bonappetit.com/photos/57acd7e9f1c801a1038bc807/1:1/w_1920,c_limit/glazed-and-lacquered-roast-turkey.jpg"
+                },
+                {
+                    "recipeID": 2,
+                    "recipeName": "Chestnut Stuffing With Fennel",
+                    "recipeLink": "https://www.foodandwine.com/recipes/chestnut-stuffing-fennel",
+                    "recipeImage": "https://www.foodandwine.com/thmb/QHbXRVrfQ3f-pQi5Sta74WQGZMs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chestnut-stuffing-with-fennel-xl-r-200512-2000-c0d8855fa28f4b54ba179a0fe741f422.jpg"
+                },
+                {
+                    "recipeID": 3,
+                    "recipeName": "Apple Pie Sparklers",
+                    "recipeLink": "https://www.delish.com/cooking/recipe-ideas/recipes/a55611/apple-pie-sparklers-recipe/",
+                    "recipeImage": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/38/1505859525-apple-pie-sparklers-close-rim-pin.jpg?resize=480:*"
+                }
+            ],
+            "ingredientList": ["apples", "chestnuts", "fennel"],
+            "prepTime": "⏰⏰⏰",
+            "cost": "$$",
+            "partySize": "Large",
+            "eventCategory": "Holidays",
+            "filterTags": ["Dairy-Free"]
         },
         {
             "id": 2,
+            "name": "Menu 2"
+        },
+        {
+            "id": 3,
             "name": "Menu 3"
         }
     ]
