@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import { Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,11 +10,6 @@ import MenusPage from "./MenusPage";
 import NewMenuForm from "./NewMenuForm";
 
 function App() {
-  const [menus, setMenus] = useState({
-    1: { id: 1, name: "Turkey Day" },
-    2: { id: 2, name: "Roast Beast" },
-    3: { id: 3, name: "Classy Party" },
-  });
 
   return ( 
     <div>
@@ -27,7 +22,7 @@ function App() {
           <NewMenuForm />
         </Route>
         <Route path="/menus">
-          <MenusPage menus={menus} />
+          <MenusPage />
         </Route>
         <Route exact path="/">
           <HomePage />

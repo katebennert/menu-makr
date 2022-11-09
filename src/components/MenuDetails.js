@@ -4,7 +4,11 @@ import { Container } from "react-bootstrap";
 
 function MenuDetails({ menus }) {
   
-  const params = useParams();
+  let params = useParams();
+  let index = params.menuID - 1;
+  // is this index var a bandaid?
+  // why when i refresh this page does the value of menus go back to the empty array? Do I need to find a way to maintain state?
+  
 
   return (
     <div>
@@ -12,7 +16,7 @@ function MenuDetails({ menus }) {
             <br/>
             <br/>
             <br/>
-            <h3>{menus[params.menuId].name}</h3>
+            <h3>{menus[index].menuName}</h3>
       </Container>
     </div>
   );
