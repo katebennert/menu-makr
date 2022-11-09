@@ -3,6 +3,7 @@
         {
             "menuID": 1, 
             "menuName": "Glitzy Turkey Feast",
+            "menuImage": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/organic-turkey.jpg",
             "recipes": [ 
                 {
                     "recipeID": 1,
@@ -28,15 +29,17 @@
             "cost": "$$",
             "partySize": "Large",
             "eventCategory": "Holidays",
-            "filterTags": ["Dairy-Free"]
+            "filterTags": ["Dairy-Free", "Nut-Free"]
         },
         {
-            "id": 2,
-            "name": "Menu 2"
+            "menuID": 2,
+            "menuName": "Menu 2",
+            "filterTags": ["Dairy-Free", "Nut-Free", "Vegan"]
         },
         {
-            "id": 3,
-            "name": "Menu 3"
+            "menuID": 3,
+            "menuName": "Menu 3",
+            "filterTags": ["Dairy-Free", "Nut-Free"]
         }
     ]
 }
