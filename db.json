@@ -4,6 +4,7 @@
             "menuID": 1, 
             "menuName": "Glitzy Turkey Feast",
             "menuImage": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/organic-turkey.jpg",
+            "menuDescription": "This fancy bird feast is great for friendsgiving or your first Thanksgiving!",
             "recipes": [ 
                 {
                     "recipeID": 1,
@@ -39,6 +40,11 @@
         {
             "menuID": 3,
             "menuName": "Menu 3",
+            "filterTags": ["Dairy-Free", "Nut-Free"]
+        },
+        {
+            "menuID": 4,
+            "menuName": "Menu 4",
             "filterTags": ["Dairy-Free", "Nut-Free"]
         }
     ]
