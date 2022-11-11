@@ -14,8 +14,6 @@ function MenusPage() {
       .then(menuData => setMenus(menuData))
   }, []);
 
-  console.log(menus)
-
   const match = useRouteMatch();
 
   return (
