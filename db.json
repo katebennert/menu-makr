@@ -2,6 +2,7 @@
     "menus": [
         {
             "menuID": 1, 
+            "featured": true,
             "menuName": "Glitzy Turkey Feast",
             "menuImage": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/organic-turkey.jpg",
             "menuDescription": "This fancy bird feast is great for friendsgiving or your first Thanksgiving!",
@@ -25,7 +26,73 @@
                     "recipeImage": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/38/1505859525-apple-pie-sparklers-close-rim-pin.jpg?resize=480:*"
                 }
             ],
-            "ingredientList": ["apples", "chestnuts", "fennel"],
+            "ingredientList": ["apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "hi"],
+            "prepTime": "⏰⏰⏰",
+            "cost": "$$$$",
+            "partySize": "Large",
+            "eventCategory": "Holidays",
+            "filterTags": ["Dairy-Free", "Nut-Free"]
+        },
+        {
+            "menuID": 2, 
+            "featured": false,
+            "menuName": "Summer Pool Bites",
+            "menuImage": "https://projectnursery.com/wp-content/uploads/2015/06/PoolParty81.jpg",
+            "menuDescription": "Summer, SPF, Flamingos",
+            "recipes": [ 
+                {
+                    "recipeID": 1,
+                    "recipeName": "Grilled Bean Burgers",
+                    "recipeLink": "https://www.tasteofhome.com/recipes/grilled-bean-burgers/",
+                    "recipeImage": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Grilled-Bean-Burgers_EXPS_SDJJ17_31617_C02_16_3b-3.jpg?fit=700,1024"
+                },
+                {
+                    "recipeID": 2,
+                    "recipeName": "Creamy Poolside Pasta Salad",
+                    "recipeLink": "https://12tomatoes.com/poolside-pasta-salad/",
+                    "recipeImage": "https://cdn.greatlifepublishing.net/wp-content/uploads/sites/2/2017/06/22113644/iStock-664767426-728x546.jpg"
+                },
+                {
+                    "recipeID": 3,
+                    "recipeName": "Pina Colada",
+                    "recipeLink": "https://www.bonappetit.com/recipe/bas-best-pina-colada",
+                    "recipeImage": "https://assets.bonappetit.com/photos/57acca141b334044149751b6/1:1/w_1920,c_limit/bas-best-pina-colada.jpg"
+                }
+            ],
+            "ingredientList": ["pineapples", "coconuts", "rum", "beans", "burger buns", "lettuce"],
+            "prepTime": "⏰",
+            "cost": "$",
+            "partySize": "Large - XL",
+            "eventCategory": "Pool Party",
+            "filterTags": ["Dairy-Free", "Nut-Free", "Vegetarian"]
+        },
+        {
+            "menuID": 3, 
+            "featured": true,
+            "menuName": "Pass the Roast Beast",
+            "menuImage": "https://arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/V7I2KXK6RVGCVA6NEGAXE4MQCQ.jpg",
+            "menuDescription": "A roast beast calls for ceremony, so get out a nice platter, place the meat in the center and surround it with the roasted vegetables. Then feast, feast, feast, feast!",
+            "recipes": [ 
+                {
+                    "recipeID": 1,
+                    "recipeName": "Glazed and Lacquered Roast Turkey",
+                    "recipeLink": "https://www.bonappetit.com/recipe/glazed-and-lacquered-roast-turkey",
+                    "recipeImage": "https://assets.bonappetit.com/photos/57acd7e9f1c801a1038bc807/1:1/w_1920,c_limit/glazed-and-lacquered-roast-turkey.jpg"
+                },
+                {
+                    "recipeID": 2,
+                    "recipeName": "Chestnut Stuffing With Fennel",
+                    "recipeLink": "https://www.foodandwine.com/recipes/chestnut-stuffing-fennel",
+                    "recipeImage": "https://www.foodandwine.com/thmb/QHbXRVrfQ3f-pQi5Sta74WQGZMs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chestnut-stuffing-with-fennel-xl-r-200512-2000-c0d8855fa28f4b54ba179a0fe741f422.jpg"
+                },
+                {
+                    "recipeID": 3,
+                    "recipeName": "Apple Pie Sparklers",
+                    "recipeLink": "https://www.delish.com/cooking/recipe-ideas/recipes/a55611/apple-pie-sparklers-recipe/",
+                    "recipeImage": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/38/1505859525-apple-pie-sparklers-close-rim-pin.jpg?resize=480:*"
+                }
+            ],
+            "ingredientList": ["apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "hi"],
             "prepTime": "⏰⏰⏰",
             "cost": "$$",
             "partySize": "Large",
@@ -33,18 +100,102 @@
             "filterTags": ["Dairy-Free", "Nut-Free"]
         },
         {
-            "menuID": 2,
-            "menuName": "Menu 2",
-            "filterTags": ["Dairy-Free", "Nut-Free", "Vegan"]
-        },
-        {
-            "menuID": 3,
-            "menuName": "Menu 3",
+            "menuID": 4, 
+            "featured": true,
+            "menuName": "Glitzy Turkey Feast",
+            "menuImage": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/organic-turkey.jpg",
+            "menuDescription": "This fancy bird feast is great for friendsgiving or your first Thanksgiving!",
+            "recipes": [ 
+                {
+                    "recipeID": 1,
+                    "recipeName": "Glazed and Lacquered Roast Turkey",
+                    "recipeLink": "https://www.bonappetit.com/recipe/glazed-and-lacquered-roast-turkey",
+                    "recipeImage": "https://assets.bonappetit.com/photos/57acd7e9f1c801a1038bc807/1:1/w_1920,c_limit/glazed-and-lacquered-roast-turkey.jpg"
+                },
+                {
+                    "recipeID": 2,
+                    "recipeName": "Chestnut Stuffing With Fennel",
+                    "recipeLink": "https://www.foodandwine.com/recipes/chestnut-stuffing-fennel",
+                    "recipeImage": "https://www.foodandwine.com/thmb/QHbXRVrfQ3f-pQi5Sta74WQGZMs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chestnut-stuffing-with-fennel-xl-r-200512-2000-c0d8855fa28f4b54ba179a0fe741f422.jpg"
+                },
+                {
+                    "recipeID": 3,
+                    "recipeName": "Apple Pie Sparklers",
+                    "recipeLink": "https://www.delish.com/cooking/recipe-ideas/recipes/a55611/apple-pie-sparklers-recipe/",
+                    "recipeImage": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/38/1505859525-apple-pie-sparklers-close-rim-pin.jpg?resize=480:*"
+                }
+            ],
+            "ingredientList": ["apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "hi"],
+            "prepTime": "⏰⏰⏰",
+            "cost": "$$",
+            "partySize": "Large",
+            "eventCategory": "Holidays",
             "filterTags": ["Dairy-Free", "Nut-Free"]
         },
         {
-            "menuID": 4,
-            "menuName": "Menu 4",
+            "menuID": 5, 
+            "featured": true,
+            "menuName": "Glitzy Turkey Feast",
+            "menuImage": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/organic-turkey.jpg",
+            "menuDescription": "This fancy bird feast is great for friendsgiving or your first Thanksgiving!",
+            "recipes": [ 
+                {
+                    "recipeID": 1,
+                    "recipeName": "Glazed and Lacquered Roast Turkey",
+                    "recipeLink": "https://www.bonappetit.com/recipe/glazed-and-lacquered-roast-turkey",
+                    "recipeImage": "https://assets.bonappetit.com/photos/57acd7e9f1c801a1038bc807/1:1/w_1920,c_limit/glazed-and-lacquered-roast-turkey.jpg"
+                },
+                {
+                    "recipeID": 2,
+                    "recipeName": "Chestnut Stuffing With Fennel",
+                    "recipeLink": "https://www.foodandwine.com/recipes/chestnut-stuffing-fennel",
+                    "recipeImage": "https://www.foodandwine.com/thmb/QHbXRVrfQ3f-pQi5Sta74WQGZMs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chestnut-stuffing-with-fennel-xl-r-200512-2000-c0d8855fa28f4b54ba179a0fe741f422.jpg"
+                },
+                {
+                    "recipeID": 3,
+                    "recipeName": "Apple Pie Sparklers",
+                    "recipeLink": "https://www.delish.com/cooking/recipe-ideas/recipes/a55611/apple-pie-sparklers-recipe/",
+                    "recipeImage": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/38/1505859525-apple-pie-sparklers-close-rim-pin.jpg?resize=480:*"
+                }
+            ],
+            "ingredientList": ["apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "hi"],
+            "prepTime": "⏰⏰⏰",
+            "cost": "$$",
+            "partySize": "Large",
+            "eventCategory": "Holidays",
+            "filterTags": ["Dairy-Free", "Nut-Free"]
+        },
+        {
+            "menuID": 6, 
+            "featured": true,
+            "menuName": "Glitzy Turkey Feast",
+            "menuImage": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/organic-turkey.jpg",
+            "menuDescription": "This fancy bird feast is great for friendsgiving or your first Thanksgiving!",
+            "recipes": [ 
+                {
+                    "recipeID": 1,
+                    "recipeName": "Glazed and Lacquered Roast Turkey",
+                    "recipeLink": "https://www.bonappetit.com/recipe/glazed-and-lacquered-roast-turkey",
+                    "recipeImage": "https://assets.bonappetit.com/photos/57acd7e9f1c801a1038bc807/1:1/w_1920,c_limit/glazed-and-lacquered-roast-turkey.jpg"
+                },
+                {
+                    "recipeID": 2,
+                    "recipeName": "Chestnut Stuffing With Fennel",
+                    "recipeLink": "https://www.foodandwine.com/recipes/chestnut-stuffing-fennel",
+                    "recipeImage": "https://www.foodandwine.com/thmb/QHbXRVrfQ3f-pQi5Sta74WQGZMs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chestnut-stuffing-with-fennel-xl-r-200512-2000-c0d8855fa28f4b54ba179a0fe741f422.jpg"
+                },
+                {
+                    "recipeID": 3,
+                    "recipeName": "Apple Pie Sparklers",
+                    "recipeLink": "https://www.delish.com/cooking/recipe-ideas/recipes/a55611/apple-pie-sparklers-recipe/",
+                    "recipeImage": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/38/1505859525-apple-pie-sparklers-close-rim-pin.jpg?resize=480:*"
+                }
+            ],
+            "ingredientList": ["apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "chestnuts", "fennel", "apples", "hi"],
+            "prepTime": "⏰⏰⏰",
+            "cost": "$$",
+            "partySize": "Large",
+            "eventCategory": "Holidays",
             "filterTags": ["Dairy-Free", "Nut-Free"]
         }
     ]
