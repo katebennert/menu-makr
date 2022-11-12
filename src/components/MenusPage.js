@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import MenuList from "./MenuList";
 import MenuDetails from "./MenuDetails";
 import { Container } from 'react-bootstrap';
 
-function MenusPage() {
+function MenusPage({ menus }) {
 
-  const [menus, setMenus] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3004/menus")
-      .then(r => r.json())
-      .then(menuData => setMenus(menuData))
-  }, []);
+  
 
   const match = useRouteMatch();
 
