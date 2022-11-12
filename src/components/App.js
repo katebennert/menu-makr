@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,21 +11,31 @@ import NewMenuForm from "./NewMenuForm";
 
 function App() {
 
+  // use state here too for the featured menus
+
+  const [menus, setMenus] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3004/menus")
+      .then(r => r.json())
+      .then(menuData => setMenus(menuData))
+  }, []);
+
   return ( 
     <div>
       <NavBar />
       <Switch>
         <Route path="/featured">
-          <FeaturedMenus />
+          <FeaturedMenus menus={menus}/>
         </Route>
         <Route path="/new">
-          <NewMenuForm />
+          <NewMenuForm menus={menus}/>
         </Route>
         <Route path="/menus">
-          <MenusPage />
+          <MenusPage menus={menus}/>
         </Route>
         <Route exact path="/">
-          <HomePage />
+          <HomePage menus={menus}/>
         </Route>
       </Switch>
     </div>
