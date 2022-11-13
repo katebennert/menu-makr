@@ -14,7 +14,7 @@ function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <LinkContainer to="/featured">
-                <Nav.Link>See Our Featured Menus!</Nav.Link>
+                <Nav.Link>Browse Our Featured Menus!</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/new">
                 <Nav.Link>Create New Menu (Admin Only)</Nav.Link>

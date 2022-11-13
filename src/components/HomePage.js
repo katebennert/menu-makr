@@ -5,9 +5,11 @@ import { Container, Carousel } from 'react-bootstrap';
 
 function HomePage({ menus }) {
 
+    const featuredMenus = menus.filter(menu => menu.featured);
+
     const featuredCarouselSlide = (
-        menus.map(menu => (
-            menu.featured ? <Carousel.Item>
+        featuredMenus.map(menu => (
+            <Carousel.Item>
                 <img
                     className="d-block w-100"
                     src={menu.menuImage}
@@ -17,14 +19,14 @@ function HomePage({ menus }) {
                     <h3>{menu.menuName}</h3>
                     <p>{menu.menuDescription}</p>
                 </Carousel.Caption>
-            </Carousel.Item> : <></>
+            </Carousel.Item> 
         ))
     )
 
   return (
     <div>
         <Container>
-            <Carousel fade>
+            <Carousel fade style={{ width: '70rem' }}>
                 {featuredCarouselSlide}
             </Carousel>
             

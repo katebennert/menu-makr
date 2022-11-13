@@ -1,13 +1,30 @@
 import React from "react";
-import { Container } from 'react-bootstrap';
+import { Container, Card, Image } from 'react-bootstrap';
 
 function FeaturedMenus({ menus }) {
 
+    const featuredMenus = menus.filter(menu => menu.featured);
+
     const renderFeaturedCard = (
-        menus.map(menu => (
-            menu.featured ? <p>{menu.menuName}</p> : <></>
+        featuredMenus.map(menu => (
+            <div key={menu.menuID}>
+                <Card style={{ width: '45rem' }}>
+                    <Card.Img variant="top" src={menu.menuImage} />
+                    <Card.ImgOverlay>
+                        <Image src="https://cdn.pixabay.com/photo/2017/11/17/14/13/holly-2957539_1280.png" style={{ width: '10rem' }}></Image>
+                        <Card.Title className="text-white">2022 Holiday Menu</Card.Title>
+                    </Card.ImgOverlay>
+                    <Card.Body>
+                        <Card.Title>{menu.menuName}</Card.Title>
+                        <Card.Text>
+                            {menu.menuDescription}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <br/>
+            </div>
         ))
-    )
+    );
 
   return (
     <div>

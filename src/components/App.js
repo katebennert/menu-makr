@@ -11,8 +11,6 @@ import NewMenuForm from "./NewMenuForm";
 
 function App() {
 
-  // use state here too for the featured menus
-
   const [menus, setMenus] = useState([]);
 
   useEffect(() => {
