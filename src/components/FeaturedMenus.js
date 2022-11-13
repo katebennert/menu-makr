@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Card, Image } from 'react-bootstrap';
+import { Container, Card, Image, Accordion, Nav, NavLink } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function FeaturedMenus({ menus }) {
 
@@ -8,7 +9,7 @@ function FeaturedMenus({ menus }) {
     const renderFeaturedCard = (
         featuredMenus.map(menu => (
             <div key={menu.menuID}>
-                <Card style={{ width: '45rem' }}>
+                <Card style={{ width: '65rem' }}>
                     <Card.Img variant="top" src={menu.menuImage} />
                     <Card.ImgOverlay>
                         <Image src="https://cdn.pixabay.com/photo/2017/11/17/14/13/holly-2957539_1280.png" style={{ width: '10rem' }}></Image>
@@ -19,6 +20,31 @@ function FeaturedMenus({ menus }) {
                         <Card.Text>
                             {menu.menuDescription}
                         </Card.Text>
+                        <Accordion flush>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>Recipes:</Accordion.Header>
+                                <Accordion.Body>
+                                    <NavLink href="https://12tomatoes.com/poolside-pasta-salad/">hi</NavLink>
+                                    {/* {menu.recipes.map(recipe => (
+                                        <Nav className="flex-column">
+                                            <Nav.Link href="https://12tomatoes.com/poolside-pasta-salad/">{recipe.recipeName}</Nav.Link>
+                                        </Nav>
+                                    ) )} */}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>Accordion Item #2</Accordion.Header>
+                                <Accordion.Body>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit anim id est laborum.
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
                     </Card.Body>
                 </Card>
                 <br/>
