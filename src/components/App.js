@@ -12,6 +12,7 @@ import NewMenuForm from "./NewMenuForm";
 function App() {
 
   const [menus, setMenus] = useState([]);
+  const [dropFilter, setDropFilter] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3004/menus")
@@ -19,9 +20,13 @@ function App() {
       .then(menuData => setMenus(menuData))
   }, []);
 
+  function handleNavClick(category) {
+    setDropFilter(category);
+  }
+
   return ( 
     <div>
-      <NavBar />
+      <NavBar handleNavClick={handleNavClick}/>
       <Switch>
         <Route path="/featured">
           <FeaturedMenus menus={menus}/>
@@ -30,7 +35,7 @@ function App() {
           <NewMenuForm menus={menus}/>
         </Route>
         <Route path="/menus">
-          <MenusPage menus={menus}/>
+          <MenusPage menus={menus} dropFilter={dropFilter}/>
         </Route>
         <Route exact path="/">
           <HomePage menus={menus}/>

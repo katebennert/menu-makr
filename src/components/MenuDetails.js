@@ -5,8 +5,8 @@ import { Container, Nav, Card, Button, CardGroup, ListGroup, Breadcrumb, Row, Co
 
 function MenuDetails({ menus }) {
   
-  let params = useParams();
-  let index = params.menuID - 1;
+    const params = useParams();
+    const index = params.id - 1;
   // is this index var a bandaid?
   // why when i refresh this page does the value of menus go back to the empty array? Do I need to find a way to maintain state?
   // how do i make a unique id for each breadcrumbitem

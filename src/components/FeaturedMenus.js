@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Image, Accordion, Nav, NavLink } from 'react-bootstrap';
+import { Container, Card, Image, Accordion, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 function FeaturedMenus({ menus }) {
@@ -8,7 +8,7 @@ function FeaturedMenus({ menus }) {
 
     const renderFeaturedCard = (
         featuredMenus.map(menu => (
-            <div key={menu.menuID}>
+            <div key={menu.id}>
                 <Card style={{ width: '65rem' }}>
                     <Card.Img variant="top" src={menu.menuImage} />
                     <Card.ImgOverlay>
@@ -24,12 +24,7 @@ function FeaturedMenus({ menus }) {
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Recipes:</Accordion.Header>
                                 <Accordion.Body>
-                                    <NavLink href="https://12tomatoes.com/poolside-pasta-salad/">hi</NavLink>
-                                    {/* {menu.recipes.map(recipe => (
-                                        <Nav className="flex-column">
-                                            <Nav.Link href="https://12tomatoes.com/poolside-pasta-salad/">{recipe.recipeName}</Nav.Link>
-                                        </Nav>
-                                    ) )} */}
+                                    <Button variant="outline-success">Success</Button>{' '}
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">

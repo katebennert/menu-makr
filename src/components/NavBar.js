@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-function NavBar() {
+function NavBar({ handleNavClick }) {
   return (
     <div>
       <Navbar bg="light" fixed="top" variant="light">
@@ -20,18 +20,18 @@ function NavBar() {
                 <Nav.Link>Create New Menu (Admin Only)</Nav.Link>
               </LinkContainer>
               <NavDropdown title="Browse Menus By Occasion" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  Holidays
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Birthday Celebrations
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Pool Parties
-                </NavDropdown.Item>
+                <LinkContainer to="/menus">
+                  <NavDropdown.Item onClick={e => handleNavClick(e.target.innerText)}>Holidays</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/menus">
+                  <NavDropdown.Item onClick={e => handleNavClick(e.target.innerText)}>Birthday Celebrations</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/menus">
+                  <NavDropdown.Item onClick={e => handleNavClick(e.target.innerText)}>Pool Parties</NavDropdown.Item>
+                </LinkContainer>
                 <NavDropdown.Divider />
                 <LinkContainer to="/menus">
-                  <NavDropdown.Item>All Menus</NavDropdown.Item>
+                  <NavDropdown.Item onClick={e => handleNavClick("")}>All Menus</NavDropdown.Item>
                 </LinkContainer>
             </NavDropdown>
             </Nav>

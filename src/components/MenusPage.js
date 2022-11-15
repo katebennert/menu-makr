@@ -4,7 +4,7 @@ import MenuList from "./MenuList";
 import MenuDetails from "./MenuDetails";
 import { Container } from 'react-bootstrap';
 
-function MenusPage({ menus }) {
+function MenusPage({ menus, dropFilter }) {
 
   
 
@@ -12,10 +12,10 @@ function MenusPage({ menus }) {
 
   return (
     <div>
-      <Route path={`${match.url}/:menuID`}>
+      <Route path={`${match.url}/:id`}>
         <MenuDetails menus={menus}/>
       </Route>
-      <MenuList menus={menus}/>
+      <MenuList menus={menus} dropFilter={dropFilter}/>
     </div>
   );
 }
