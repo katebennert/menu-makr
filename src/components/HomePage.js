@@ -9,7 +9,7 @@ function HomePage({ menus }) {
 
     const featuredCarouselSlide = (
         featuredMenus.map(menu => (
-            <Carousel.Item>
+            <Carousel.Item key={menu.id}>
                 <img
                     className="d-block w-100"
                     src={menu.menuImage}
@@ -26,10 +26,12 @@ function HomePage({ menus }) {
   return (
     <div>
         <Container>
+            <br/>
+            <br/>
+            <br/>
             <Carousel fade style={{ width: '70rem' }}>
                 {featuredCarouselSlide}
             </Carousel>
-            
         </Container>
     </div>
   )

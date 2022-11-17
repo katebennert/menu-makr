@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Button, Form, Row, Col } from 'react-bootstrap';
 
-function NewMenuForm() {
+function NewMenuForm({ onAddMenu }) {
 
     const [menuName, setMenuName] = useState("");
     const [menuImage, setMenuImage] = useState("");
@@ -34,22 +34,20 @@ function NewMenuForm() {
             partySize: partySize,
             eventCategory: eventCategory,
             filterTags: filterTags,
-            featured: featured
+            featured: featured,
+            likes: 0
         }
-
-        console.log(newMenu)
+    
+        fetch("http://localhost:3004/menus", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newMenu)
+        })
+            .then(r => r.json())
+            .then(newMenuData => onAddMenu(newMenuData))
     }
-
-    //     fetch("http://localhost:3004/menus", {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify(newMenu)
-    //     })
-    //         .then(r => r.json())
-    //         .then(newMenuData => console.log(newMenuData))
-    // }
 
   return (
     <div>
@@ -286,7 +284,7 @@ function NewMenuForm() {
                 <Form.Group as={Row} className="mb-3" controlId="ingredientList">
                     <Form.Label column sm={2}>Ingredient List:</Form.Label>
                     <Col sm={10}>
-                        <Form.Control as="textarea" rows={3} onChange={e => setIngredientList(e.target.value)}/>
+                        <Form.Control as="textarea" rows={3} onChange={e => setIngredientList(e.target.value.split(","))}/>
                     </Col>
                 </Form.Group>
 

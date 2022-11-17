@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./NavBar";
 import FeaturedMenus from "./FeaturedMenus";
@@ -9,16 +9,24 @@ import MenuDetails from "./MenuDetails";
 import MenusPage from "./MenusPage";
 import NewMenuForm from "./NewMenuForm";
 
+// Add a ScrollToTop compnent to fix scrolling issues AHHHHH https://v5.reactrouter.com/web/guides/scroll-restoration
+
 function App() {
 
   const [menus, setMenus] = useState([]);
   const [dropFilter, setDropFilter] = useState("");
+  const history = useHistory();
 
   useEffect(() => {
     fetch("http://localhost:3004/menus")
       .then(r => r.json())
       .then(menuData => setMenus(menuData))
   }, []);
+
+  function onAddMenu(newMenuData) {
+    setMenus([...menus, newMenuData]);
+    history.push(`/menus`)
+  }
 
   function handleNavClick(category) {
     setDropFilter(category);
@@ -32,7 +40,7 @@ function App() {
           <FeaturedMenus menus={menus}/>
         </Route>
         <Route path="/new">
-          <NewMenuForm menus={menus}/>
+          <NewMenuForm menus={menus} onAddMenu={onAddMenu}/>
         </Route>
         <Route path="/menus">
           <MenusPage menus={menus} dropFilter={dropFilter}/>
