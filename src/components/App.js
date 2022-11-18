@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { Route, Switch, useHistory } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./NavBar";
-import FeaturedMenus from "./FeaturedMenus";
+//import FeaturedMenus from "./FeaturedMenus";
 import HomePage from "./HomePage";
 import MenuDetails from "./MenuDetails";
 import MenusPage from "./MenusPage";
@@ -36,9 +36,9 @@ function App() {
     <div>
       <NavBar handleNavClick={handleNavClick}/>
       <Switch>
-        <Route path="/featured">
+        {/* <Route path="/featured">
           <FeaturedMenus menus={menus}/>
-        </Route>
+        </Route> */}
         <Route path="/new">
           <NewMenuForm menus={menus} onAddMenu={onAddMenu}/>
         </Route>

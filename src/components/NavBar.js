@@ -13,12 +13,9 @@ function NavBar({ handleNavClick }) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <LinkContainer to="/featured">
+              {/* <LinkContainer to="/featured">
                 <Nav.Link>Browse Our Featured Menus!</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/new">
-                <Nav.Link>Create New Menu (Admin Only)</Nav.Link>
-              </LinkContainer>
+              </LinkContainer> */}
               <NavDropdown title="Browse Menus By Occasion" id="basic-nav-dropdown">
                 <LinkContainer to="/menus">
                   <NavDropdown.Item onClick={e => handleNavClick(e.target.innerText)}>Holidays</NavDropdown.Item>
@@ -34,6 +31,9 @@ function NavBar({ handleNavClick }) {
                   <NavDropdown.Item onClick={e => handleNavClick("")}>All Menus</NavDropdown.Item>
                 </LinkContainer>
             </NavDropdown>
+              <LinkContainer to="/new">
+                <Nav.Link>Create New Menu (Admin Only)</Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
           </Container>

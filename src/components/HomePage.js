@@ -29,7 +29,7 @@ function HomePage({ menus }) {
             <br/>
             <br/>
             <br/>
-            <Carousel fade style={{ width: '70rem' }}>
+            <Carousel fade style={{ width: '60rem' }} className="carousel">
                 {featuredCarouselSlide}
             </Carousel>
         </Container>

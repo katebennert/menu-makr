@@ -1,16 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Container, Nav, Card, Button, CardGroup, ListGroup, Breadcrumb, Row, Col } from "react-bootstrap";
-//import { v4 as uuid } from 'uuid';
+import { Container, Card, CardGroup, ListGroup, Breadcrumb, Form, Badge } from "react-bootstrap";
 
 function MenuDetails({ menus }) {
   
     const params = useParams();
     const index = params.id - 1;
-  // is this index var a bandaid?
   // why when i refresh this page does the value of menus go back to the empty array? Do I need to find a way to maintain state?
-  // how do i make a unique id for each breadcrumbitem
-  // use state for a checked off grocery list
 
   return (
     <div>
@@ -19,35 +15,38 @@ function MenuDetails({ menus }) {
             <br/>
             <br/>
             <CardGroup>
-                <Card className="bg-dark text-white" style={{ width: '18rem' }}>
+                <Card style={{ width: '18rem' }}>
                     <Card.Img src={menus[index].menuImage} alt="Card image" />
-                    <Card.ImgOverlay>
-                        <Card.Title>{menus[index].menuName}</Card.Title>
+                    <Card.ImgOverlay className="text-white">
+                        <Card.Title><h1>{menus[index].menuName}</h1></Card.Title>
                         <Card.Text>
-                            {menus[index].menuDescription}
+                            
                         </Card.Text>
                     </Card.ImgOverlay>
+                    <Card.Body>
+                        {menus[index].menuDescription}
+                    </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem' }}>
                     <ListGroup variant="flush">
                         <ListGroup.Item>Recipes:
                             <Breadcrumb>
                                 {menus[index].recipes.map(recipe => (
-                                    <Breadcrumb.Item href={recipe.recipeLink} target="_blank">{recipe.recipeName}</Breadcrumb.Item>
+                                    <Breadcrumb.Item key={recipe.recipeID} href={recipe.recipeLink} target="_blank">{recipe.recipeName}</Breadcrumb.Item>
                                 ))
                                 }
                             </Breadcrumb>
                         </ListGroup.Item>
-                        <ListGroup.Item>Check out the {menus[index].menuName} playlist on Spotify!</ListGroup.Item>
+                        <ListGroup.Item>Prep Time: {menus[index].prepTime} | Cost: {menus[index].cost} |  {menus[index].filterTags.map(filterTag => (
+                    <Badge bg="light" text="dark" key={menus[index].filterTags.indexOf(filterTag)}>{filterTag}</Badge>
+                ))}</ListGroup.Item>
                         <ListGroup.Item><strong>Shopping List: </strong>
                             <Container>
-                                <Row>
-                                    {menus[index].ingredientList.map(ingredient => (
-                                    <Col>{ingredient}</Col>
-                                    ))
-                                    }
-                                </Row>
-                            </Container>
+                                {menus[index].ingredientList.map(ingredient => (
+                                        <Form.Check key={menus[index].ingredientList.indexOf(ingredient)} label={ingredient} />
+                                    
+                            ))}
+                        </Container>
                         </ListGroup.Item>
                     </ListGroup>
                  </Card>

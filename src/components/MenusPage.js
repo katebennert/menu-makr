@@ -6,8 +6,6 @@ import { Container } from 'react-bootstrap';
 
 function MenusPage({ menus, dropFilter }) {
 
-  
-
   const match = useRouteMatch();
 
   return (
