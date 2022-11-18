@@ -42,7 +42,7 @@ function MenuCard({ menu }) {
                 ))}
             </ListGroup.Item>
             <ListGroup.Item>  
-                <Button variant="outline-success" onClick={handleLikeClick}>❤️ {menu.likes} Likes</Button>
+                <Button variant="outline-success" onClick={handleLikeClick}>❤️ {likes} Likes</Button>
                 {" "}
             </ListGroup.Item>
         </ListGroup>
