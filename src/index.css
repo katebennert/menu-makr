@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.carousel {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
