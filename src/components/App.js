@@ -25,7 +25,7 @@ function App() {
 
   function onAddMenu(newMenuData) {
     setMenus([...menus, newMenuData]);
-    history.push(`/menus`)
+    history.push(`/menus/${newMenuData.id}`)
   }
 
   function handleNavClick(category) {
