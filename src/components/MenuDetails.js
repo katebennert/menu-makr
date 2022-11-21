@@ -43,7 +43,7 @@ function MenuDetails({ menus }) {
                         <ListGroup.Item><strong>Shopping List: </strong>
                             <Container>
                                 {menus[index].ingredientList.map(ingredient => (
-                                        <Form.Check key={menus[index].ingredientList.indexOf(ingredient)} label={ingredient} />
+                                    <Form.Check key={menus[index].ingredientList.indexOf(ingredient)} label={ingredient} />
                                     
                             ))}
                         </Container>

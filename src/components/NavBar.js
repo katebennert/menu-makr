@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 function NavBar({ handleNavClick }) {
+
   return (
     <div>
       <Navbar bg="light" fixed="top" variant="light">
