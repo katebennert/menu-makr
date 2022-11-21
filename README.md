@@ -10,6 +10,26 @@ Users can explore our menus and use the grocery list checklist to help guide the
 
 ![menu-makr-new-menu-form](https://lh3.googleusercontent.com/pw/AL9nZEXTLqr4OtA-LaSMp5KESe4Od5o6MdJ4SEm5Eb8psEqZ8FCB9wY8x7xUKL1dfHqVpgEWmO-5phMW3nuR_memOUktr6iJDOwgOIY4Fr07Pw9PsNjxJAFe1dckBXyfof_GBzjZlxDJc-AkOgwsh9Al7X3Hig=w1415-h823-no?authuser=0)
 
+
+## Installation
+
+Fork and clone this repository onto your local machine. In the directory for the project run:
+```
+npm install
+```
+
+Open http://localhost:3004/menus to view the data in your browser. 
+
+To start the server, from the project directory run:
+```
+npm run server
+```
+
+To launch the app, from the project directory run:
+```
+npm start
+```
+
 ## Credits/Disclaimers
 
 This project was created to fulfill requirements for Flatiron School SE Phase 2. I do not own any of the rights to any of the images used in this project.
