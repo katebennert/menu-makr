@@ -28,6 +28,11 @@ function App() {
     history.push(`/menus/${newMenuData.id}`)
   }
 
+  function onDelete(menuID) {
+    setMenus(menus.filter(menu => menu.id !== menuID));
+    history.push(`/menus`);
+  }
+
   function handleNavClick(category) {
     setDropFilter(category);
   }
@@ -43,7 +48,7 @@ function App() {
           <NewMenuForm menus={menus} onAddMenu={onAddMenu}/>
         </Route>
         <Route path="/menus">
-          <MenusPage menus={menus} dropFilter={dropFilter}/>
+          <MenusPage menus={menus} dropFilter={dropFilter} onDelete={onDelete}/>
         </Route>
         <Route exact path="/">
           <HomePage menus={menus}/>

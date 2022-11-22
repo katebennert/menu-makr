@@ -1,12 +1,20 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Container, Card, CardGroup, ListGroup, Breadcrumb, Form, Badge } from "react-bootstrap";
+import { Container, Card, CardGroup, ListGroup, Breadcrumb, Form, Badge, Button } from "react-bootstrap";
 
-function MenuDetails({ menus }) {
+function MenuDetails({ menus, onDelete }) {
   
     const params = useParams();
     const index = params.id - 1;
   // why when i refresh this page does the value of menus go back to the empty array? Do I need to find a way to maintain state?
+
+  function handleDelete(){
+    fetch(`http://localhost:3004/menus/${menus[index].id}`,{
+            method: 'DELETE'
+        })
+        .then(r => r.json())
+        .then(() => onDelete(menus[index].id))
+  }
 
   return (
     <div>
@@ -23,9 +31,16 @@ function MenuDetails({ menus }) {
                             
                         </Card.Text>
                     </Card.ImgOverlay>
-                    <Card.Body>
+                    {/* <Card.Body> */}
+                    <ListGroup>
+                    <ListGroup.Item>
                         {menus[index].menuDescription}
-                    </Card.Body>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                        <Button variant="outline-danger" onClick={handleDelete}>Delete Menu</Button>
+                        </ListGroup.Item>
+                        </ListGroup>
+                    {/* </Card.Body> */}
                 </Card>
                 <Card style={{ width: '18rem' }}>
                     <ListGroup variant="flush">
@@ -44,9 +59,8 @@ function MenuDetails({ menus }) {
                             <Container>
                                 {menus[index].ingredientList.map(ingredient => (
                                     <Form.Check key={menus[index].ingredientList.indexOf(ingredient)} label={ingredient} />
-                                    
-                            ))}
-                        </Container>
+                                ))}
+                            </Container>
                         </ListGroup.Item>
                     </ListGroup>
                  </Card>
