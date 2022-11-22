@@ -9,8 +9,6 @@ import MenuDetails from "./MenuDetails";
 import MenusPage from "./MenusPage";
 import NewMenuForm from "./NewMenuForm";
 
-// Add a ScrollToTop compnent to fix scrolling issues AHHHHH https://v5.reactrouter.com/web/guides/scroll-restoration
-
 function App() {
 
   const [menus, setMenus] = useState([]);
