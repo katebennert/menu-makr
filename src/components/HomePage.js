@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Carousel } from 'react-bootstrap';
-
-// use state to setFeaturedMenus so you can use it in other places?
+import { LinkContainer } from 'react-router-bootstrap';
 
 function HomePage({ menus }) {
 
@@ -9,17 +8,21 @@ function HomePage({ menus }) {
 
     const featuredCarouselSlide = (
         featuredMenus.map(menu => (
+            
             <Carousel.Item key={menu.id}>
+                <LinkContainer to={`/menus/${menu.id}`}>
                 <img
                     className="d-block w-100"
                     src={menu.menuImage}
                     alt="First slide"
                 />
+                </LinkContainer>
                 <Carousel.Caption>
                     <h3>{menu.menuName}</h3>
                     <p>{menu.menuDescription}</p>
                 </Carousel.Caption>
             </Carousel.Item> 
+            
         ))
     )
 

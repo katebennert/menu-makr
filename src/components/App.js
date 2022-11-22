@@ -39,7 +39,7 @@ function App() {
         {/* <Route path="/featured">
           <FeaturedMenus menus={menus}/>
         </Route> */}
-        <Route path="/new">
+        <Route path="/menus/new">
           <NewMenuForm menus={menus} onAddMenu={onAddMenu}/>
         </Route>
         <Route path="/menus">

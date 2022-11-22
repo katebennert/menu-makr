@@ -32,7 +32,7 @@ function NavBar({ handleNavClick }) {
                   <NavDropdown.Item onClick={e => handleNavClick("")}>All Menus</NavDropdown.Item>
                 </LinkContainer>
             </NavDropdown>
-              <LinkContainer to="/new">
+              <LinkContainer to="/menus/new">
                 <Nav.Link>Create New Menu (Admin Only)</Nav.Link>
               </LinkContainer>
             </Nav>
